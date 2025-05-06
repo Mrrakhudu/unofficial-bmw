@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ELECTRIC MODELS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="transition-bg">
+    <header>
+        <h1>BMW Models</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="electric.html">Electric</a></li>
+                <li><a href="testdrive.html">Test Drive</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Explore Our Electric Models</h2>
+        <p>Select a model to learn more about its features and specifications.</p>
+
+        <div>
+            <a href="i4.html">
+                <img src="Picture/Screenshot 2025-05-01 045006.png" alt="BMW 1 Series" width="400" height="250">
+                <figcaption>BMW i4</figcaption>
+            </a>
+            <p>The all-electric driver's car</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 BMW Group. All rights reserved.</p>
+        <p>
+            <a href="https://www.bmw.com/en/index.html" target="_blank">Visit Official Website</a> | 
+            <a href="feedback.html">Feedback</a>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Start with black, then transition to BMW blue
+            document.body.style.backgroundColor = "black";
+            
+            setTimeout(function() {
+                document.body.style.transition = "background-color 3s ease-in-out";
+                document.body.style.backgroundColor = "#0066B1"; // BMW blue color
+            }, 100); // Short delay to trigger transition
+        });
+        </script>
+</body>
+</html>

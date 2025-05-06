@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BMW - BOOK A TEST DRIVE</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header>
+        <h1>BMW</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="electric.html" >Electric</a></li>
+                <li><a href="testdrive.html">Test Drive</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Schedule a Test Drive</h2>
+        <p>Fill in your details below to book a test drive.</p>
+    
+        <form id="testDriveForm">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="id-number">ID Number:</label><br>
+            <input type="text" id="id-number" name="id-number" required><br><br>
+    
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <button type="submit">Submit</button>
+        </form>
+    
+        <p id="confirmationMessage" style="display:none; color: white; font-size: 1.5rem; margin-top: 1rem;">
+            Thank you for submitting, we will contact you shortly.
+        </p>
+    </section>
+<footer>
+    <p>&copy; 2025 BMW Group. All rights reserved.</p>
+    <p>
+        <a href="https://www.bmw.com/en/index.html" target="_blank">Visit Official Website</a> | 
+        <a href="feedback.html">Feedback</a>
+    </p>
+</footer>
+<script>
+    document.getElementById("testDriveForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent actual form submission
+        document.getElementById("confirmationMessage").style.display = "block"; // Show confirmation message
+    });
+    </script>
+</body>
