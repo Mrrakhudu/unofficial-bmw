@@ -1,34 +1,35 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body background with proper spacing */
 body {
-    background-color: black; /* Entire page background is black */
+    background-color: black;
     color: white;
     font-family: Arial, sans-serif;
-    padding: 20px; /* Moves text away from the edges */
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
 }
 
-/* Header with BMW M colors */
 header {
-    background: linear-gradient(to right, #5EBEFF, #0066B1, #FF0000); /* Light Blue, Darker Blue, Red */
+    background: linear-gradient(to right, #5EBEFF, #0066B1, #FF0000);
     color: white;
     text-align: center;
-    padding: 2rem; /* Added more padding */
+    padding: 2rem;
     font-family: Arial, sans-serif;
+    width: 100%;
 }
 
-/* Navigation Bar */
+
 nav ul {
     list-style: none;
-    display: flex; /* Flexbox for horizontal layout */
-    justify-content: space-around; /* Evenly space the links */
-    padding: 1rem 20px; /* Adds space around nav */
-    background: black; /* Black navigation bar below the header */
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 20px;
+    background: black;
+    width: 100%;
 }
 
 nav ul li a {
@@ -40,48 +41,52 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #FF0000; /* Red hover effect */
+    color: #FF0000;
 }
 
-/* Section Titles */
+
 section h2 {
     text-align: center;
     color: white;
     margin: 3rem 0 1rem;
 }
 
-/* Section container */
 section {
-    width: 80%; /* Keeps the content away from edges */
-    margin: 30px auto; /* Centers the content */
-    padding: 20px; /* Adds internal spacing */
+    width: 90%;
+    max-width: 100%;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Images */
+
 section img {
     display: block;
+    width: 100%;
+    max-width: 600px;
     margin: 1rem auto;
-    border: 2px solid white; /* White border around images */
+    border: 2px solid white;
 }
 
-/* Footer */
+
 footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 2rem;
+    width: 100%;
 }
 
 footer a {
-    color: #5EBEFF; /* Light blue for links in the footer */
+    color: #5EBEFF;
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #FF0000; /* Red hover effect for footer links */
+    color: #FF0000;
 }
 
-/* Caption Styling */
+
 figcaption {
     text-align: center;
     margin-top: 0.5rem;
@@ -89,30 +94,30 @@ figcaption {
     color: white;
 }
 
-/* Center the form container */
+
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 90%;
+    max-width: 500px;
     margin: auto;
     text-align: center;
-    padding: 20px; /* Adds space inside the form */
+    padding: 20px;
 }
 
-/* Style the input fields */
+
 input {
     width: 100%;
-    max-width: 400px;
     padding: 12px;
-    margin: 15px 0; /* Adds spacing between fields */
+    margin: 15px 0;
     border: 2px solid white;
     border-radius: 5px;
     text-align: center;
 }
 
-/* Style the submit button */
+
 button {
     padding: 12px 25px;
     background-color: #0066B1;
@@ -122,86 +127,38 @@ button {
     cursor: pointer;
     font-size: 1rem;
     margin-top: 15px;
+    width: 100%;
+    max-width: 200px;
 }
 
 button:hover {
     background-color: #FF0000;
 }
 
-/* Fullscreen loading screen */
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out;
-}
 
-/* Hide loading screen */
-.loading-screen.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 
-/* Loading spinner */
-.loader {
-    width: 80px;
-    height: 80px;
-    border: 10px solid rgba(255, 255, 255, 0.3);
-    border-top: 10px solid #5EBEFF;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
+    section {
+        width: 95%;
+        padding: 10px;
+    }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+    form {
+        width: 100%;
+    }
 
-/* Fullscreen pop-up styling */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out;
+    button {
+        width: 100%;
+    }
 }
-
-/* Show pop-up */
-.popup.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Close button */
-.popup button {
-    background-color: #0066B1;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-.popup button:hover {
-    background-color: #FF0000;
+img {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    object-fit: contain; 
 }
