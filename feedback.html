@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BMW - BOOK A TEST DRIVE</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header>
+        <h1>BMW</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="electric.html" >Electric</a></li>
+                <li><a href="testdrive.html">Test Drive</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+    <h2>We Value Your Feedback!</h2>
+    <p>Let us know what you think about our website.</p>
+
+    <form id="feedbackForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="rating">Rate Us (1-5):</label>
+        <select id="rating" name="rating">
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+
+        <label for="comments">Your Feedback:</label>
+        <textarea id="comments" name="comments" rows="4" required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <p id="thankYouMessage" style="display: none; color: lightgreen; font-size: 1.5rem; margin-top: 10px;">
+        ✅ Thank you for your feedback!
+    </p>
+</section>
+<footer>
+    <p>&copy; 2025 BMW Group. All rights reserved.</p>
+    <p>
+        <a href="https://www.bmw.com/en/index.html" target="_blank">Visit Official Website</a> | 
+        <a href="feedback.html">Feedback</a>
+    </p>
+</footer>
+<script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent page reload
+
+    // Hide form & show thank-you message
+    document.getElementById("feedbackForm").style.display = "none";
+    document.getElementById("thankYouMessage").style.display = "block";
+
+    // Refresh page after 3 seconds
+    setTimeout(() => {
+        location.reload();
+    }, 10000);
+});
+    </script>
+
+</body>
+</html>
