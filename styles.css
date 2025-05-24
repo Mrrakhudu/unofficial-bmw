@@ -155,10 +155,13 @@ button:hover {
     button {
         width: 100%;
     }
+<<<<<<< HEAD
+=======
 }
 img {
     width: 100%; 
     max-width: 600px; 
     height: auto; 
     object-fit: contain; 
+>>>>>>> 91b411b44ecb2cc399ec9ca9e3eb3a6851c487cc
 }
