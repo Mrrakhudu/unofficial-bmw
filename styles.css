@@ -163,4 +163,31 @@ img {
     height: auto; 
     object-fit: contain; 
 
+}/* Ensure the page takes up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content grows to push footer down */
+main {
+    flex-grow: 1; /* This makes sure content pushes the footer down */
+}
+
+/* Footer stays at the bottom */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+}
+.logo {
+    width: 120px;  
+    height: auto;
+    display: block;
+    margin: 0 auto;  
+    padding: 10px;
 }
